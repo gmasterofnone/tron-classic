@@ -12,13 +12,13 @@ const ctx = {
 describe('Game', () => {
   it('should end the game if block collides with wall', () => {
     const game =  new Game(ctx)
-    const block = game.blocks[0];
+    const player = game.players[0];
 
-    block.x = ctx.canvas.width;
+    player.x = ctx.canvas.width;
 
-    game.handleBlock(block);
+    game.handlePlayer(player);
 
-    assert.isTrue(game.gameOver)
+    assert.isFalse(game.gameOver)
 
   })
   // it('should take properties', () => {})
