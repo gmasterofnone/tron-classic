@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 100px 650px 1fr;
+  grid-template-rows: 70px 560px 300px;
   width: 100%;
   height: 100vh;
   font-family: 'Press Start 2P', cursive;
@@ -15,8 +16,16 @@ body {
   align-content: flex-end;
   justify-content: space-around;
   grid-template-rows: 1 / span 1;
-  padding: 20px 200px 0 200px;
+  padding: 0 100px 0 100px; 
 }
+
+.player-one, .player-two {
+  display: flex;
+  color: #0000ff;
+  align-self: flex-end;
+  text-align: center;
+}
+
 
 h3 {
   font-size: 1.25rem;
@@ -27,9 +36,6 @@ h3 {
   font-size: 1.25rem;
 }
 
-.logo {
-  height: 75px;
-}
 
 .game-map {
   display: flex;
@@ -44,12 +50,12 @@ h3 {
   margin: auto;
   display: block;
   width: 1200px;
-  height: 600px;
+  height: 550px;
   background: url("./assets/grid_pattern.png") no-repeat center;
-  border-radius: 2px;
-  -moz-box-shadow:    inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
-  -webkit-box-shadow: inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
-  box-shadow:         inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
+  border-radius: 5px;
+  -moz-box-shadow:    inset 0 0 50px #c2ffff, 0 0 30px #c2ffff;
+  -webkit-box-shadow: inset 0 0 50px #c2ffff, 0 0 30px #c2ffff;
+  box-shadow:         inset 0 0 50px #c2ffff, 0 0 30px #c2ffff;
 }
 
 .start-screen {
@@ -58,21 +64,13 @@ h3 {
 
 .game-controls {
   align-content: center;
-  background-color: white; 
-  display: flex;
+  background: url("./assets/game-control.png") no-repeat center;
+  background-color: black;
   justify-content: space-around;
   grid-template-rows: 3 / span 1;
   padding: 0 100px 0 100px; 
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.start-game, .pause-game {
-  align-self: center;
-}
-
-.player-one, .player-two {
-  display: flex;
-  color: #0000ff;
-  align-self: center;
-  text-align: center;
-}
 
