@@ -4,7 +4,7 @@ body {
   background-color: black;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 70px 560px 300px;
+  grid-template-rows: 50px 580px 300px;
   width: 100%;
   height: 100vh;
   font-family: 'Press Start 2P', cursive;
@@ -22,7 +22,8 @@ body {
 .player-one, .player-two {
   display: flex;
   color: #0000ff;
-  align-self: flex-end;
+  /*margin: 0;
+  padding: 0;*/
   text-align: center;
 }
 
@@ -33,7 +34,6 @@ h3 {
 
 .p1-lives, .p2-lives {
   margin-left: 30px;
-  font-size: 1.25rem;
 }
 
 
@@ -71,6 +71,41 @@ h3 {
   padding: 0 100px 0 100px; 
   width: 1200px;
   margin: 0 auto;
+}
+
+.start-game, .pause-game {
+  border-radius: 50%;
+  color: #ef2729;
+  font-family: 'Press Start 2P', cursive;
+  font-size: .5rem;
+  width: 65px;
+  height: 65px;
+  position: relative;
+  top: 29px;
+  left: 503px;
+  background-color: transparent;
+  border: 2px solid #ef2729;
+}
+
+.start-game:focus, .pause-game:focus { 
+  outline: none;
+}
+
+
+.start-game {
+  border-color: #5fb737;
+  color: #5fb737;
+  margin-right: 45px;
+}
+
+.start-game:hover {
+  background-color: #5fb737;
+  color: white;
+}
+
+.pause-game:hover {
+  background-color: #ef2729;
+  color: white;
 }
 
 
