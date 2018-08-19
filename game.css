@@ -16,17 +16,18 @@ body {
   align-content: flex-end;
   justify-content: space-around;
   grid-template-rows: 1 / span 1;
-  padding: 0 100px 0 100px; 
+  padding: 0 170px 0 170px; 
 }
 
-.player-one, .player-two {
+.player-one, .player-two, .player-announce {
   display: flex;
   color: #0000ff;
-  /*margin: 0;
-  padding: 0;*/
   text-align: center;
 }
 
+.announce {
+  color: #ef2729;
+}
 
 h3 {
   font-size: 1.25rem;
@@ -35,7 +36,6 @@ h3 {
 .p1-lives, .p2-lives {
   margin-left: 30px;
 }
-
 
 .game-map {
   display: flex;
