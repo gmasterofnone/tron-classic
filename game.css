@@ -15,7 +15,7 @@ body {
   align-content: flex-end;
   justify-content: space-around;
   grid-template-rows: 1 / span 1;
-  padding: 20px 125px 0 125px;
+  padding: 20px 200px 0 200px;
 }
 
 h3 {
@@ -47,9 +47,9 @@ h3 {
   height: 600px;
   background: url("./assets/grid_pattern.png") no-repeat center;
   border-radius: 2px;
-  -moz-box-shadow:    inset 0 0 30px #c2ffff, 0 0 30px #c2ffff;
-  -webkit-box-shadow: inset 0 0 30px #c2ffff, 0 0 30px #c2ffff;
-  box-shadow:         inset 0 0 30px #c2ffff, 0 0 30px #c2ffff;
+  -moz-box-shadow:    inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
+  -webkit-box-shadow: inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
+  box-shadow:         inset 0 0 50px #c2ffff, 0 0 50px #c2ffff;
 }
 
 .start-screen {
