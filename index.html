@@ -10,25 +10,38 @@
   <section class="game-status">
     <article class="player-one">
       <h3>PLAYER ONE</h3>
-      <h1 class="p1-lives">00</h1>
-    
+      <h3 class="p1-lives">03</h3>
+    </article>
+    <article class="player-announce">
+      <h4  class="announce">PLAYER ONE WINS ROUND!!!</h4>
     </article>
     <article class="player-two">
       <h3>PLAYER TWO</h3>
-      <h1 class="p2-lives">00</h1>
-      
+      <h3 class="p2-lives">03</h3>   
     </article>
   </section>
   <section class="game-map">
     <article class="start-screen">
     </article>
-    <canvas id="game" width="1200" height="600"></canvas>
+    <canvas id="game" width="1200" height="550"></canvas>
   </section>
   <section class="game-controls">
-    <article class="start-game">
-      <img class="logo" src="./assets/logo.svg">
-    </article> 
+    <button class="start-game">Start</button>
+    <button class="pause-game">Pause</button>
+    <article class="left-player">
+      <button class="w-button">W</button>
+      <button class="d-button">D</button>
+      <button class="a-button">A</button>
+      <button class="s-button">S</button>
+    </article>
+    <article class="right-player">
+      <button class="up-button">▲</button>
+      <button class="right-button">▶</button>
+      <button class="left-button">◀</button>
+      <button class="down-button">▼</button>
+    </article>
   </section>
   <script src="main.bundle.js"></script>
 </body>
 </html>
+
