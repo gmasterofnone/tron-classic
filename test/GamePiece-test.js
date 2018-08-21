@@ -1,5 +1,7 @@
 const { assert } = require('chai');
 const GamePiece = require('../lib/GamePiece.js')
+const Trail = require('../lib/Trail.js')
+const Game = require('../lib/Game.js')
 
 describe('GamePiece', () => {
   let gamepiece; 
@@ -19,9 +21,9 @@ describe('GamePiece', () => {
       width: 10,
       color: 'green',
       dx: 1,
-      dy: 1,
-      dxv: 1,
-      dyv: 1
+      dy: 0,
+      dxv: 3,
+      dyv: 3
 
     })
   });
@@ -39,9 +41,40 @@ describe('GamePiece', () => {
 
   });
 
-  it('should collide with walls', () => {})
-  it('should be able to move', () => {})
-  it('should be able to changeDirection', () => {})
+  it('should collide with walls', () => {
+    const gamepiece = new GamePiece(700, 1300, 10, 10, 'green')
+    const gamepiece2 = new GamePiece(30, 30, 10, 10, 'green')
+
+    const isColliding = gamepiece.isCollidingWithWall(550, 1200);
+    const isNotColliding = gamepiece2.isCollidingWithWall(550, 1200);
+
+    assert.isTrue(isColliding);
+    assert.isFalse(isNotColliding);
+
+  })
+
+  it.skip('should collide with trails', () => {
+    const gamepiece = new GamePiece(30, 30, 10, 10, 'green')
+    const gamepiece2 = new GamePiece(60, 30, 10, 10, 'red')
+    const trail1 = new Trail(30, 30, 10, 10, 'green')
+    const trail2 = new Trail(60, 10, 10, 10, 'red')
+
+    const trail = [];
+    trail.push (trail1)
+    trail.push (trail2)
+    console.log (trail)
+
+    assert.equal (gamepiece.isCollidingWithTrail(trail), true)
+
+
+  })
+
+  it('should be able to move and change direction', () => {
+    gamepiece = new GamePiece(30, 30, 10, 10, 'green')
+    gamepiece.changeDirection({dx:0, dy:1});
+    assert.equal (gamepiece.dy, 1)
+  })
+
 })
 
 // Setup
