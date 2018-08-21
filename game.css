@@ -149,7 +149,6 @@ button {
   font-size: .5rem;
 }
 
-
 .right-button, .d-button {
   position: relative;
   top: 2px;
@@ -167,6 +166,6 @@ button {
   bottom: 20px;
 }
 
-
-
-
+.btn-hover {
+  background-color: yellow;
+}
