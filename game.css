@@ -16,7 +16,7 @@ body {
   align-content: flex-end;
   justify-content: space-around;
   grid-template-rows: 1 / span 1;
-  padding: 10px 170px 0 170px; 
+  padding: 10px 190px 0 190px; 
 }
 
 .player-one, .player-two, .player-announce {
