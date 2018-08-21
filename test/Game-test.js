@@ -33,12 +33,13 @@ describe('Game', () => {
 
   })
   
-  it.skip('it should add trail into array', () => {
+  it('it should add trail into array', () => {
     const game =  new Game(ctx)
 
     game.animate();
-    console.log (game)
-    assert.equal(Game.trails.length > 1, true);
+    // comment out draw in animate();
+    // thank you ctx!
+    assert.equal(game.trails.length > 1, true);
 
   })
 
@@ -49,6 +50,22 @@ describe('Game', () => {
     player.x = ctx.canvas.width;
     game.handlePlayer(player);
     assert.equal(game.scoreKeeper.roundOver, true)
+  })
+
+  it('should collide with trails', () => {
+    const game =  new Game(ctx)
+    game.handleKeyPress ('w')
+    game.animate();
+    game.handleKeyPress ('a')
+    game.animate();
+    game.handleKeyPress ('s')
+    game.animate();
+
+    // comment out draw in animate();
+    // thank you ctx!
+    assert.equal (game.handlePlayer(game.players[0]), true)
+
+
   })
   
 })

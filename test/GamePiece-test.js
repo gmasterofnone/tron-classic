@@ -53,21 +53,6 @@ describe('GamePiece', () => {
 
   })
 
-  it.skip('should collide with trails', () => {
-    const gamepiece = new GamePiece(30, 30, 10, 10, 'green')
-    const gamepiece2 = new GamePiece(60, 30, 10, 10, 'red')
-    const trail1 = new Trail(30, 30, 10, 10, 'green')
-    const trail2 = new Trail(60, 10, 10, 10, 'red')
-
-    const trail = [];
-    trail.push (trail1)
-    trail.push (trail2)
-    console.log (trail)
-
-    assert.equal (gamepiece.isCollidingWithTrail(trail), true)
-
-
-  })
 
   it('should be able to move and change direction', () => {
     gamepiece = new GamePiece(30, 30, 10, 10, 'green')
